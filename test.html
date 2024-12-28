@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: lightblue;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: var(--light);
+            width: 230px;
+            height: 100%;
+            z-index: 2000;
+            overflow-x: hidden;
+            scrollbar-width: none;
+            transition: all 0.3s ease;
+        }
+
+        .container li {
+            margin-top: 200px;
+            height: 55px;
+            margin-left: 6px;
+            border-radius: 55px 0 0 55px;
+            margin-bottom: 12px;
+            padding: 4px;
+            background: gray;
+            position: relative;
+        }
+
+        .container li::before {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: purple;
+            border-radius: 50%;
+            top: -40px;
+            right: 0;
+            box-shadow: 20px 20px 0 red;
+            z-index: -1;
+        }
+        .container li::after {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: purple;
+            border-radius: 50%;
+            top: -40px;
+            right: 0;
+            box-shadow: 20px -20px 0 red;
+            z-index: -1;
+        }
+    </style>
+    <title>Test</title>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li>abc</li>
+            <li>abc</li>
+        </ul>
+    </div>
+</body>
+
+</html>
